@@ -1,0 +1,113 @@
+// USER VARIABLES SECTION
+
+$beige: #b69d74
+$lightBeige: #F0C363
+$darkBeige: #B59554
+$text: #171924
+
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl:1360px, wxp: 1440px, wxpp: 1600px, fhd: 1920px, qhd: 2560px)
+
+// +media-breakpoint-up(sm)
+// +media-breakpoint-up(md)
+// +media-breakpoint-up(lg)
+// +media-breakpoint-up(xl)
+// +media-breakpoint-up(wxp)
+// +media-breakpoint-up(wxpp)
+// +media-breakpoint-up(fhd)
+// +media-breakpoint-up(qshd)
+
+// FONTS LOAD SECTION
+
+// 100 - Extra Light or Ultra Light
+// 200 - Light or Thin
+// 300 - Book or Demi
+// 400 - Regular or Normal
+// 500 - Medium
+// 600 - Semibold or Demibold
+// 700 - Bold
+// 800 - Black or Extra Bold or Heavy
+// 900 - Extra Black or Fat or Ultra Blac
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import '../libs/swiper/swiper-bundle.min.css'
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap // Uncomment to initially display system fonts
+		src: url('#{$furl}.eot')
+		src: url('#{$furl}.eot?#iefix') format('embedded-opentype'), url('#{$furl}.woff2') format('woff2'), url('#{$furl}.woff') format('woff'), url('#{$furl}.ttf') format('truetype')
+
+@include font('NotoSans', normal, 400, '../fonts/NotoSans-Regular')
+@include font('NotoSans', normal, 500, '../fonts/NotoSans-Medium')
+@include font('NotoSans', normal, 500, '../fonts/NotoSans-SemiBold')
+@include font('NotoSans', normal, 700, '../fonts/NotoSans-Bold')
+// GENERAL DOCUMENT STYLES
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+	text-align: center
+
+::selection
+	background-color: $beige
+	color: #fff
+
+body
+	font-family: Roboto, sans-serif
+	font-size: 16px
+	min-width: 360px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $text
+
+*
+	box-sizing: border-box
+
+main
+	flex: 1
+
+*,
+body
+	margin: 0
+	font-family: "NotoSans"
+	font-size: 14px
+	font-weight: 400
+	line-height: 140%
+	color: #171924
+  /* display: flex; */
+	flex-direction: column
+	justify-content: space-between
+  /* height: 100vh; */
+
+.lg-counter > *
+	color: #999
+
+ul
+	padding: 0
+
+p
+	margin: 0px
+
+button
+	background-color: transparent
+	border: none
+	padding: 0
+	cursor: pointer
