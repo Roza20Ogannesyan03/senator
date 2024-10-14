@@ -105,3 +105,33 @@ function renderPopup() {
 //   modal.style.display = "none";
 //   body.classList.remove("noscroll");
 // }
+
+var thumbs = new Swiper(document.getElementById("swiper2"), {
+  direction: "horizontal",
+  slidesPerView: "auto",
+  spaceBetween: 12,
+  centeredSlides: false,
+  slideToClickedSlide: true,
+  initialSlide: 3,
+  breakpoints: {
+    // when window width is >= 320px
+    768: {
+      direction: "vertical",
+    },
+  },
+});
+
+var slider = new Swiper(document.getElementById("swiper1"), {
+  slidesPerView: 1,
+  loop: true,
+  centeredSlides: true,
+  thumbs: {
+    swiper: thumbs,
+  },
+
+  slideToClickedSlide: true,
+  navigation: {
+    nextEl: ".images__swiper-button-next",
+    prevEl: ".images__swiper-button-prev",
+  },
+});

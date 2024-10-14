@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Senator</title>
+  <meta name="description" content="Startup HTML template OptimizedHTML 5" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" href="images/dest/favicon.png" />
+  <meta property="og:image" content="images/dest/dest/preview.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" integrity="sha512-nUqPe0+ak577sKSMThGcKJauRI7ENhKC2FQAOOmdyCYSrUh0GnwLsZNYqwilpMmplN+3nO3zso8CWUgu33BDag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/app.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <img src="images/dest/logo.png" alt="логотип" class="logo" />
+    <div class="header__top_wrapper">
+      <div class="container">
+        <div class="header__top">
+          <div class="header__top_left">
+            <div class="social social2">
+              <a href="" class="social__icon_link">
+                <svg class="social__icon viber">
+                  <use class="social__icon_use" xlink:href="/images/sprite.svg#viber"></use>
+                </svg>
+              </a>
+              <a href="" class="social__icon_link">
+                <svg class="social__icon whats">
+                  <use class="social__icon_use" xlink:href="/images/sprite.svg#whats"></use>
+                </svg>
+              </a>
+              <a href="" class="social__icon_link">
+                <svg class="social__icon tg">
+                  <use class="social__icon_use" xlink:href="/images/sprite.svg#tg"></use>
+                </svg>
+              </a>
+            </div>
+
+            <div class="icon-text address">
+              <svg class="header__icon">
+                <use class="header__icon_use" xlink:href="/images/sprite.svg#gps"></use>
+              </svg>
+              <p class="text__header__icon">
+                м. Новокузнецкая, ул. Пятницкая, д. 25, стр. 1, Москва
+              </p>
+            </div>
+          </div>
+
+          <div class="logo__container"></div>
+
+          <div class="header__top_right">
+            <div class="icon-text time">
+              <svg class="header__icon">
+                <use class="header__icon_use" xlink:href="/images/sprite.svg#time"></use>
+              </svg>
+              <p class="text__header__icon">
+                Пн-Пт 10:00-20:00, Сб-Вс 11:00-18:00
+              </p>
+            </div>
+            <a href="" class="icon-text">
+              <svg class="header__icon">
+                <use class="header__icon_use" xlink:href="/images/sprite.svg#mail"></use>
+              </svg>
+              <p class="text__header__icon mail-text">senator@gmail.com</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="header__bottom">
+        <div class="burger">
+          <div class="burger__line"></div>
+        </div>
+
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="" class="menu__link">Аренда костюмов</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Условия аренды</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Наш салон</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="logo__container"></div>
+
+        <div class="header__bottom_right">
+          <a href="" class="icon-text">
+            <svg class="header__icon">
+              <use class="header__icon_use" xlink:href="/images/sprite.svg#phone"></use>
+            </svg>
+            <p class="text__header__icon">+7 (902) 647 38 92</p>
+          </a>
+
+          <div class="button button-white">Заказать звонок</div>
+
+          <div class="social">
+            <a href="" class="social__icon_link">
+              <svg class="social__icon viber">
+                <use class="social__icon_use" xlink:href="/images/sprite.svg#viber"></use>
+              </svg>
+            </a>
+            <a href="" class="social__icon_link">
+              <svg class="social__icon whats">
+                <use class="social__icon_use" xlink:href="/images/sprite.svg#whats"></use>
+              </svg>
+            </a>
+            <a href="" class="social__icon_link">
+              <svg class="social__icon tg">
+                <use class="social__icon_use" xlink:href="/images/sprite.svg#tg"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup"></div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="padding-vertical">
+        <div class="single">
+          <div class="single-left">
+            <div class="images">
+              <div class="swiper swiper-container images-thumbs" id="swiper2">
+                <div class="swiper-wrapper">
+                  <!-- <? foreach ($pagi as $img) { ?> -->
+                  <div class="swiper-slide images-thumbs__slide"><img src="images/dest/photo_head_cart.png" alt="фото товара"></div>
+                  <div class="swiper-slide images-thumbs__slide"><img src="images/dest/photo_small_2.png" alt="фото товара"></div>
+                  <div class="swiper-slide images-thumbs__slide"><img src="images/dest/photo_small_3.png" alt="фото товара"></div>
+                  <div class="swiper-slide images-thumbs__slide"><img src="images/dest/photo_small_4.png" alt="фото товара"></div>
+                  <!-- <? } ?> -->
+                </div>
+              </div>
+
+              <div class="swiper swiper-container images-slider" id="swiper1">
+                <!-- <? if (get_field('price')) { ?> -->
+                <img src="images/dest/icon_star.svg" alt="" class="star">
+                <!-- <? } ?> -->
+                <div class="swiper-wrapper" id="lightgallery">
+                  <!-- <? foreach ($pagi as $img) { ?> -->
+                  <a href="images/dest/photo_head_cart.png" class="swiper-slide images-slider__slide img-container" style="width: 400px;">
+
+                    <img src="images/dest/photo_head_cart.png" alt="фото товара" class="img-container__img">
+
+                    <div class="search"><img src="images/dest/icon_zoom.svg" alt="" class=""></div>
+                  </a>
+
+                  <a href="images/dest/photo_small_2.png" class="swiper-slide images-slider__slide img-container" style="width: 400px;">
+
+                    <img src="images/dest/photo_small_2.png" alt="фото товара" class="img-container__img">
+
+                    <div class="search"><img src="images/dest/icon_zoom.svg" alt="" class=""></div>
+                  </a>
+
+                  <a href="images/dest/photo_small_3.png" class="swiper-slide images-slider__slide img-container" style="width: 400px;">
+
+                    <img src="images/dest/photo_small_3.png" alt="фото товара" class="img-container__img">
+
+                    <div class="search"><img src="images/dest/icon_zoom.svg" alt="" class=""></div>
+                  </a>
+
+                  <a href="images/dest/photo_small_4.png" class="swiper-slide images-slider__slide img-container" style="width: 400px;">
+
+                    <img src="images/dest/photo_small_4.png" alt="фото товара" class="img-container__img">
+
+                    <div class="search"><img src="images/dest/icon_zoom.svg" alt="" class=""></div>
+                  </a>
+                  <!-- 
+            <? } ?> -->
+                </div>
+                <div class="swiper-button-prev images__swiper-button-prev arrow-prev arrow">
+                  <svg class="slider__icon">
+                    <use xlink:href="images/sprite.svg#prev"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-next images__swiper-button-next arrow-next arrow">
+                  <svg class="slider__icon">
+                    <use xlink:href="images/sprite.svg#next"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="single__bottom">
+              <div class="single__bottom-block">
+                <p class="single__bottom-block__title">Вам будет интересно узнать:</p>
+                <ul class="single__bottom-block__list">
+                  <li class="single__bottom-block__list-item">
+                    <a href="" class="single__bottom-block__list-link">Образ Денди</a>
+                  </li>
+
+                  <li class="single__bottom-block__list-item">
+                    <a href="" class="single__bottom-block__list-link">Как выбрать размер костюма</a>
+                  </li>
+
+                  <li class="single__bottom-block__list-item">
+                    <a href="" class="single__bottom-block__list-link">Как носить смокинг</a>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="single__bottom-block">
+
+                <p class="single__bottom-block__title">Связаться с нами:</p>
+
+                <a href="" class="icon-text">
+                  <svg class="header__icon">
+                    <use class="header__icon_use" xlink:href="/images/sprite.svg#phone"></use>
+                  </svg>
+                  <p class="text__header__icon text__header__icon-phone">+7 (902) 647 38 92</p>
+                </a>
+
+                <a href="" class="icon-text">
+                  <svg class="header__icon">
+                    <use class="header__icon_use" xlink:href="/images/sprite.svg#mail"></use>
+                  </svg>
+                  <p class="text__header__icon">senator@gmail.com</p>
+                </a>
+
+                <div class="social">
+                  <a href="" class="social__icon_link">
+                    <svg class="social__icon viber">
+                      <use class="social__icon_use" xlink:href="/images/sprite.svg#viber"></use>
+                    </svg>
+                  </a>
+                  <a href="" class="social__icon_link">
+                    <svg class="social__icon whats">
+                      <use class="social__icon_use" xlink:href="/images/sprite.svg#whats"></use>
+                    </svg>
+                  </a>
+                  <a href="" class="social__icon_link">
+                    <svg class="social__icon tg">
+                      <use class="social__icon_use" xlink:href="/images/sprite.svg#tg"></use>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="single-right">
+
+            <h2 class="single__title">Белый смокинг с синими лацканами
+         тройка 20015 Yarmich</h2>
+
+            <div class="single__code">Код товара: <span class="single__artikul">MSU124</span></div>
+
+            <div class="single__price">
+
+              <p class="single__old-price">6 500 ₽</p>
+              <p class="single__skidka">6 500 ₽</p>
+            </div>
+
+            <div class="single__drop-down">
+
+              <div class="single__drop-down__block">
+                <p class="single__drop-down__block__title">Размеры:</p>
+
+                <div class="select">
+                  <div class="select__title-wrapper">
+                    <p class="select__title">52</p>
+                    <div class="select__arrow">
+
+                      <svg width="8" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.538 2.03L3.86 6.186A.184.184 0 004 6.25a.188.188 0 00.14-.063L7.462 2.03a.17.17 0 00-.046-.253.183.183 0 00-.094-.026H.678a.183.183 0 00-.16.097.168.168 0 00.02.182z" fill="#171924" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="select__list">
+                    <!-- <?php while ($query->have_posts()) {
+  
+        $query->the_post();
+        $thumbnail_url = get_the_post_thumbnail_url();
+      ?> -->
+
+                    <p class="select__list-item">
+                      <!--<?php the_title(); ?>-->42</p>
+                    <p class="select__list-item">44</p>
+                    <p class="select__list-item">46</p>
+                    <p class="select__list-item">48</p>
+                    <p class="select__list-item">50</p>
+                    <p class="select__list-item">52</p>
+
+                    <!-- <?php
+      }
+      wp_reset_postdata();
+      wp_reset_query(); ?> -->
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="single__drop-down__block">
+                <p class="single__drop-down__block__title">Рост:</p>
+
+                <div class="select">
+                  <div class="select__title-wrapper">
+                    <p class="select__title">6 (167-188 см)</p>
+                    <div class="select__arrow">
+
+                      <svg width="8" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.538 2.03L3.86 6.186A.184.184 0 004 6.25a.188.188 0 00.14-.063L7.462 2.03a.17.17 0 00-.046-.253.183.183 0 00-.094-.026H.678a.183.183 0 00-.16.097.168.168 0 00.02.182z" fill="#171924" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="select__list">
+                    <!-- <?php while ($query->have_posts()) {
+    
+          $query->the_post();
+          $thumbnail_url = get_the_post_thumbnail_url();
+        ?> -->
+
+                    <p class="select__list-item">
+                      <!--<?php the_title(); ?>-->6 (167-188 см)</p>
+                    <p class="select__list-item">6 (167-188 см)</p>
+                    <p class="select__list-item">6 (167-188 см)</p>
+                    <p class="select__list-item">6 (167-188 см)</p>
+                    <p class="select__list-item">6 (167-188 см)</p>
+                    <p class="select__list-item">6 (167-188 см)</p>
+
+                    <!-- <?php
+        }
+        wp_reset_postdata();
+        wp_reset_query(); ?> -->
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="single__drop-down__block">
+                <p class="single__drop-down__block__title">Цвет:</p>
+
+                <div class="select">
+                  <div class="select__title-wrapper">
+                    <p class="select__title"><span class="select__color" style="background-color: #fff;"></span> Белый</p>
+                    <div class="select__arrow">
+
+                      <svg width="8" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.538 2.03L3.86 6.186A.184.184 0 004 6.25a.188.188 0 00.14-.063L7.462 2.03a.17.17 0 00-.046-.253.183.183 0 00-.094-.026H.678a.183.183 0 00-.16.097.168.168 0 00.02.182z" fill="#171924" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="select__list">
+                    <!-- <?php while ($query->have_posts()) {
+      
+            $query->the_post();
+            $thumbnail_url = get_the_post_thumbnail_url();
+          ?> -->
+
+          <p class="select__list-item select__title"><span class="select__color" style="background-color: #fff;"></span> Белый</p>
+          <p class="select__list-item select__title"><span class="select__color" style="background-color: #000;"></span> Черный</p>
+          <p class="select__list-item select__title"><span class="select__color" style="background-color: rgb(25, 25, 82);"></span>Синий</p>
+          <p class="select__list-item select__title"><span class="select__color" style="background-color: #9f936c;"></span> Бежевый</p>
+
+                    <!-- <?php
+          }
+          wp_reset_postdata();
+          wp_reset_query(); ?> -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="single__button button button-beige">Записаться на примерку</div>
+
+            <p class="single__bottom-block__title">Прокат:</p>
+
+            <ul class="single__list">
+              <li class="single__list-item">Удобный портплед (чехол) для переноски костюма</li>
+            </ul>
+
+            <p class="single__bottom-block__title">В стоимость аренды включено:</p>
+
+            <ul class="single__list">
+              <li class="single__list-item"> Бабочка, галстук и платок к любому образу предоставляются бесплатно</li>
+              <li class="single__list-item">Полная химчистка после аренды</li>
+              <li class="single__list-item"> Отпаривание костюма, сорочки, подготовка обуви и аксессуаров</li>
+              <li class="single__list-item">Удобный портплед (чехол) для переноски костюма</li>
+            </ul>
+
+            <p class="single__bottom-block__title">Продлить аренду можно за 500 ₽ в сутки</p>
+
+            <a href="" class="single__bottom-block__list-link">Подробные условия проката</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <a href="" class="footer__logo"><img src="images/dest/logo-footer.png" alt="" /></a>
+
+          <ul class="footer__menu">
+            <li class="menu__item">
+              <a href="" class="menu__link">Аренда костюмов</a>
+            </li>
+            <li class="menu__item">
+              <a href="" class="menu__link">Условия аренды</a>
+            </li>
+            <li class="menu__item">
+              <a href="" class="menu__link">Наш салон</a>
+            </li>
+            <li class="menu__item">
+              <a href="" class="menu__link">Зачем нужна примерка?</a>
+            </li>
+          </ul>
+
+          <ul class="footer__menu">
+            <li class="menu__item"><a href="" class="menu__link">Акции</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Блог</a></li>
+            <li class="menu__item">
+              <a href="" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="footer__contacts">
+            <div class="tel-container">
+              <a href="" class="icon-text">
+                <svg class="header__icon">
+                  <use class="header__icon_use" xlink:href="/images/sprite.svg#phone"></use>
+                </svg>
+                <p class="text__header__icon">+7 (902) 647 38 92</p>
+              </a>
+
+              <div class="button button-white">Заказать звонок</div>
+
+              <div class="social">
+                <a href="" class="social__icon_link">
+                  <svg class="social__icon viber">
+                    <use class="social__icon_use" xlink:href="/images/sprite.svg#viber"></use>
+                  </svg>
+                </a>
+                <a href="" class="social__icon_link">
+                  <svg class="social__icon whats">
+                    <use class="social__icon_use" xlink:href="/images/sprite.svg#whats"></use>
+                  </svg>
+                </a>
+                <a href="" class="social__icon_link">
+                  <svg class="social__icon tg">
+                    <use class="social__icon_use" xlink:href="/images/sprite.svg#tg"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="icon-text">
+              <svg class="header__icon">
+                <use class="header__icon_use" xlink:href="/images/sprite.svg#gps"></use>
+              </svg>
+              <p class="text__header__icon">
+                м. Новокузнецкая, ул. Пятницкая, д. 25, стр. 1, Москва
+              </p>
+            </div>
+
+            <div class="icon-text">
+              <svg class="header__icon">
+                <use class="header__icon_use" xlink:href="/images/sprite.svg#time"></use>
+              </svg>
+              <p class="text__header__icon">
+                Пн-Пт 10:00-20:00, Сб-Вс 11:00-18:00
+              </p>
+            </div>
+            <a href="" class="icon-text">
+              <svg class="header__icon">
+                <use class="header__icon_use" xlink:href="/images/sprite.svg#mail"></use>
+              </svg>
+              <p class="text__header__icon">senator@gmail.com</p>
+            </a>
+          </div>
+
+        </div>
+        <div class="footer-bottom-container">
+          <div class="container">
+            <div class="footer-bottom">
+              <p class="footer-bottom__rights">© Senator. Все права защищены!</p>
+
+              <a href="" class="footer-bottom__develop">Разработка сайта</a>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <script src="js/app.min.js"></script>
+    <script src="js/lg-thumbnail.umd.js"></script>
+    <script src="js/lg-zoom.umd.js"></script>
+    <script src="js/lightgallery.min.js"></script>
+    <script src="js/lightgallery.umd.js"></script>
+
+    <script>
+      lightGallery(document.getElementById("lightgallery"), {
+        plugins: [lgZoom, lgThumbnail],
+        licenseKey: "your_license_key",
+        speed: 500,
+        addClass: "easyzoom",
+        // ... other settings
+      });
+    </script>
+
+    <script>
+      let selects = document.querySelectorAll('.select');
+      selects.forEach(select => {
+        select.querySelector('.select__title-wrapper').addEventListener("click", function() {
+          select.classList.toggle('active');
+        });
+        let selectList = select.querySelectorAll('.select__list-item');
+        selectList.forEach(selectItem => {
+          selectItem.addEventListener("click", function() {
+            select.querySelector('.select__title').innerHTML = selectItem.innerHTML;
+            // document.querySelector(".spec-input").value = document.querySelector(".select__option_title").textContent;
+            // console.log(document.querySelector(".spec-input").value);
+            select.classList.remove('active');
+          });
+        });
+      })
+    </script>
+
+</body>
+
+</html>
