@@ -439,6 +439,64 @@
     </footer>
 
 
+    <div class="modal modal-detail">
+      <form class="modal__form g-single" action="mail-fitting.php" method="post" onsubmit="return submitFormSuit(this)">
+        <input type="hidden" class="g-recaptcha-response-form-single" name="g-recaptcha-response-form-single" id="g-recaptcha-response-form-callback">
+    
+        <div class="close-detail">
+          <img src="images/dest/icon_close.svg" alt="">
+        </div>
+        <div class="form_title"></div>
+        
+        <input
+          type="text"
+          name="name-single"
+          id="name-single"
+          class="input name"
+          placeholder="Ваше имя" />
+        <label for="tel-single" class="label">
+          <input
+            type="tel"
+            name="tel-single"
+            id="tel-modal"
+            class="input tel"
+            placeholder="+7 999 999 - 99 - 99"
+            pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" minlength="16" maxlength="16" />
+        </label>
+    
+        <p class="modal__rent"></p>
+        <input type="hidden" name="rent" class="hidden-rent">
+        <input type="hidden" name="product" value="">
+    
+        <div class="modal-point__container"> Цвет:
+          <p class="modal__color"></p>
+        </div>
+    
+        <input type="hidden" name="color" class="hidden-color">
+    
+        <div class="modal-point__container"> Размер:
+          <p class="modal__size"></p>
+        </div>
+    
+        <input type="hidden" name="size" class="hidden-size">
+    
+        <div class="modal-point__container"> Цена:
+          <p class="detail__price"><!--<? if (get_field('price')) {
+                                      the_field('price');
+                                    } else {
+                                      the_field('old_price');
+                                    } ?> ₽--></p>
+        </div>
+    
+        <input type="hidden" name="price" value="? the_field('price');  ?> ₽">
+    
+  
+    
+        <button class="button-beige">Записаться на примерку</button>
+        <div class="response"></div>
+      </form>
+    </div>
+    
     
     <script src="js/app.min.js"></script>
     <script src="js/lg-thumbnail.umd.js"></script>

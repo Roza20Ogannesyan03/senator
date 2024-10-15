@@ -129,7 +129,7 @@
 
   <main>
  
-    <div class="margin-bottom">
+    <div class="margin-vertical">
         <div class="container">
           <div class="bow">
             <img src="images/dest/icon_bow.svg" alt="" class="icon" />
@@ -209,7 +209,66 @@
         </div>
     </div>
 
-<div class="margin-vertical">
+
+  <div class="margin-bottom">
+      <div class="container">
+        <div class="bow">
+          <img src="images/dest/icon_bow.svg" alt="" class="icon" />
+        </div>
+        <div class="title">Вопрос-ответ</div>
+
+          <div class="questions">
+            <div class="questions__item">
+              <div class="questions__item-content">
+              <p class="questions__item-title">Как выбрать правильный размер костюма или смокинга?</p>
+              <p class="questions__item-text">Да, вы можете арендовать костюм на 1 день или на более длительный срок, в зависимости от ваших
+                нужд. Уточните продолжительность аренды при оформлении заказа.
+                Да, вы можете арендовать костюм на 1 день или на более длительный срок, в зависимости от ваших
+                нужд. Уточните продолжительность аренды при оформлении заказа.</p>
+             </div>
+
+              <div class="questions__item-button" ></div>
+            </div>
+            <div class="questions__item">
+              <div class="questions__item-content">
+              <p class="questions__item-title">Какие документы нужны для аренды костюма?</p>
+              <p class="questions__item-text">Да, вы можете арендовать костюм на 1 день или на более длительный срок, в зависимости от ваших
+                нужд. Уточните продолжительность аренды при оформлении заказа.</p>
+             </div>
+
+             <div class="questions__item-button"></div>
+            </div>
+            <div class="questions__item">
+              <div class="questions__item-content">
+              <p class="questions__item-title">Можно ли арендовать костюм на несколько дней?</p>
+              <p class="questions__item-text">Да, вы можете арендовать костюм на 1 день или на более длительный срок, в зависимости от ваших
+                нужд. Уточните продолжительность аренды при оформлении заказа.</p>
+             </div>
+
+             <div class="questions__item-button" onclick="return openItem(this)"></div>
+            </div>
+            <div class="questions__item">
+              <div class="questions__item-content">
+              <p class="questions__item-title">Что делать, если костюм или смокинг испачкался во время аренды?</p>
+              <p class="questions__item-text">Да, вы можете арендовать костюм на 1 день или на более длительный срок, в зависимости от ваших
+                нужд. Уточните продолжительность аренды при оформлении заказа.</p>
+             </div>
+
+             <div class="questions__item-button" onclick="return openItem(this)"></div>
+            </div>
+            <div class="questions__item">
+              <div class="questions__item-content">
+              <p class="questions__item-title">Можно ли изменить или отменить бронирование?</p>
+              <p class="questions__item-text">Да, вы можете арендовать костюм на 1 день или на более длительный срок, в зависимости от ваших
+                нужд. Уточните продолжительность аренды при оформлении заказа.</p>
+             </div>
+
+             <div class="questions__item-button" onclick="return openItem(this)"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+<div class="margin-bottom">
   <div class="container">
   <div class="katalog-banner" style="background-image: url(images/dest/photo_banner_cat.png);">
       <p class="katalog-banner__suptitle">Только до конца месяца всем новым клиентам</p>
@@ -349,13 +408,64 @@
         </div>
     </footer>
 
+
+
+
+
+    <div class="modal  modal-head">
+      <form class="modal__form g-callback" action="<?php echo get_template_directory_uri(); ?>/mail.php" method="post" onsubmit="return submitForm(this)">
+        <div class="close">
+          <img src="images/dest/icon_close.svg" alt="крестик">
+        </div>
+        <p class="modal__title">
+          Заказать звонок
+        </p>
+
+        <p class="modal__form-text">
+          Заполните форму ниже, и мы свяжемся с вами, чтобы подобрать
+          смокинг или костюм, который идеально подойдет для вашего
+          мероприятия.
+        </p>
+
+        <input
+          type="text"
+          name="name"
+          class="modal__form-input"
+          placeholder="Введите Ваше имя"
+        />
+
+        <input
+          type="tel"
+          name="tel"
+          id=""
+          class="modal__form-input"
+          placeholder="Введите ваш контактный телефон"
+          pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" minlength="16" maxlength="16"
+        />
+
+        <p class="policy">
+          Нажимая на кнопку «Записаться на примерку» вы подтверждаете, что
+          согласны с <a href="" class="policy__link"
+            >Политикой конфиденциальности</a
+          >
+        </p>
+
+        <div class="modal__form-button button button-beige">
+          Оставить заявку
+        </div>
+        <div class="response"></div>
+      </form>
+    </div>
+    
+
+
     <script src="js/app.min.js"></script>
     <script src="js/lg-thumbnail.umd.js"></script>
     <script src="js/lg-zoom.umd.js"></script>
     <script src="js/lightgallery.min.js"></script>
     <script src="js/lightgallery.umd.js"></script>
 
-    <script>
+    <!-- <script>
       lightGallery(document.getElementById("lightgallery"), {
         plugins: [lgZoom, lgThumbnail],
         licenseKey: "your_license_key",
@@ -365,6 +475,69 @@
       });
     </script>
 
+
+<div class="prokat2__left">
+  <div class="title">Прокат мужских костюмов
+    и смокингов</div>
+  <div class="prokat2__text">
+    Нередко нашим клиентам так нравится взятый в аренду костюм или смокинг, что им трудно с ним
+    расстаться! Еще бы, ведь RENTSUIT предлагает пиджаки, жилетки и брюки исключительно из шерстяных
+    тканей – идеального костюмного материала. Который модельеры всего мира ценят за возможность
+    подчеркнуть достоинства и скрыть недостатки любой мужской фигуры. Неудивительно, что в такой одежде
+    Вы произведете неизгладимое впечатление не только на даму сердца, но и на деловых партнеров, коллег
+    и руководство. В этом случае мы не только продадим понравившийся Вам костюм по привлекательной
+    цене. Но и подарим наиболее подходящие к нему аксессуары. Просмотрите наш раздел аренда
+    костюмов и смокинга — фотогалерея.
+    Нередко нашим клиентам так нравится взятый в аренду костюм или смокинг, что им трудно с ним
+    расстаться! Еще бы, ведь RENTSUIT предлагает пиджаки, жилетки и брюки исключительно из шерстяных
+    тканей – идеального костюмного материала. Который модельеры всего мира ценят за возможность
+    подчеркнуть достоинства и скрыть недостатки любой мужской фигуры. Неудивительно, что в такой одежде
+    Вы произведете неизгладимое впечатление не только на даму сердца, но и на деловых партнеров, коллег
+    и руководство. В этом случае мы не только продадим понравившийся Вам костюм по привлекательной
+    цене. Но и подарим наиболее подходящие к нему аксессуары. Просмотрите наш раздел аренда
+    костюмов и смокинга — фотогалерея.
+  </div>
+  
+  <button class="read_more" onclick="return openItem(this)">
+    <a class="detail-button">Показать еще</a>
+    <img src="assets/images/icon_long_arrow.svg" alt="стрелка" class="read_more_arrow"/>
+  </button>
+</div> -->
+
+<script>
+  let list = document.querySelectorAll('.questions__item');
+
+  list.forEach(item => {
+    let text = item.querySelector('.questions__item-text');
+    let button = item.querySelector('.questions__item-button');
+    button.addEventListener("click", function(){
+      if (text.classList.contains('open')) { 
+      text.classList.remove('open'); 
+      text.style.maxHeight = "0px"; 
+      button.classList.remove('open');
+     } else { 
+      text.classList.add('open'); 
+      text.style.maxHeight = text.scrollHeight + "px"; 
+      button.classList.add('open');
+  } 
+    })
+    
+  })
+
+ function openItem(e) { 
+   console.log(e);
+   if (list.classList.contains('open')) { 
+     list.classList.remove('open'); 
+     list.style.maxHeight = "0px"; 
+     e.classList.remove('open');
+  } else { 
+   list.classList.add('open'); 
+   list.style.maxHeight = list.scrollHeight + "px"; 
+   e.classList.add('open');
+  } 
+ }
+
+</script>
 
 
 </body>
