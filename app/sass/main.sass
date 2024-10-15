@@ -220,6 +220,8 @@ img
 			// display: flex
 			position: relative
 			padding-left: 25px
+			&::marker
+				color: $beige
 			&:before
 				content: ''
 				position: absolute
@@ -474,7 +476,7 @@ img
 
 .logo
 	position: absolute
-	left: 50%
+	left: 53%
 	top: 0
 	transform: translateX(-50%)
 	z-index: 2
@@ -482,6 +484,7 @@ img
 	height: 100%
 	+media-breakpoint-up(sm)
 		width: 200px
+		left: 50%
 	&__container
 		width: 200px
 
@@ -653,10 +656,11 @@ img
 	display: none
 	+media-breakpoint-up(xl)
 		display: block
-.text__header__icon
-	display: none
-	+media-breakpoint-up(sm)
-		display: block
+.header
+	.text__header__icon
+		display: none
+		+media-breakpoint-up(sm)
+			display: block
 
 .social2
 	display: flex !important
@@ -1035,6 +1039,7 @@ img
 .footer-container
 	display: flex
 	flex-direction: column
+	justify-content: space-between
 	align-items: center
 	gap: 30px
 	flex-wrap: wrap
@@ -1087,10 +1092,13 @@ img
 	width: 100%
 .footer-bottom
 	display: flex
-	flex-direction: row
+	flex-direction: column
 	align-items: center
 	justify-content: space-between
 	padding: 24px 0
+	gap: 10px
+	+media-breakpoint-up(sm)
+		flex-direction: row
 	&__rights
 		color: #999999
 		font-size: 16px
@@ -1154,6 +1162,8 @@ img
 .images-thumbs__slide
 	height: 70px !important
 	width: 70px !important
+	border-radius: 8px
+	overflow: hidden
 	img
 		width: 100%
 		height: 100%
@@ -1163,7 +1173,8 @@ img
 .images
 	width: 100%
 	max-width: 618px
-	flex-direction: column
+	display: flex
+	flex-direction: column-reverse
 	align-items: center
 	gap: 20px
 	+media-breakpoint-up(md)
@@ -1196,8 +1207,6 @@ img
 			&__slide
 				height: 94px !important
 				width: 94px !important
-				border-radius: 8px
-				overflow: hidden
 		+media-breakpoint-up(md)
 			width: 94px !important
 			height: 624px !important
@@ -1247,6 +1256,9 @@ img
 
 .single-left
 	max-width: 624px
+	margin-bottom: 48px
+	+media-breakpoint-up(lg)
+		margin-bottom: 0
 	.icon-text
 		margin-bottom: 16px
 	.text__header__icon-phone
@@ -1282,14 +1294,12 @@ img
 	max-width: 646px
 
 .single
-	display: flex
-	flex-direction: column
-	justify-content: start
-	align-items: center
-	gap: 48px
 	+media-breakpoint-up(lg)
+		display: flex
 		flex-direction: row
+		justify-content: start
 		align-items: start
+		gap: 48px
 	.social
 		display: flex
 		justify-content: start
@@ -1421,3 +1431,93 @@ img
 .select__title-wrapper,
 .select__list
 	cursor: pointer
+
+.tabs
+	/* .tabs__tab-block */
+	&__tab-block
+		display: flex
+		flex-wrap: wrap
+		gap: 6px
+		/* .tabs__tab */
+	&__tab
+		border: 1px solid #C2C2C2
+		border-top-left-radius: 8px
+		border-top-right-radius: 8px
+		background-color: #fff
+		color: $text
+		width: max-content
+		padding: 12px 16px
+		display: block
+		+media-breakpoint-up(sm)
+			padding: 16px 20px
+		&.active
+			background-color: $beige
+			color: #fff
+	/* .tabs__content */
+	&__content
+		display: none
+		padding: 10px
+		border: 1px solid #C2C2C2
+		border-bottom-left-radius: 8px
+		border-top-right-radius: 8px
+		border-bottom-right-radius: 8px
+		margin-top: -0.5px
+		+media-breakpoint-up(sm)
+			padding: 32px
+			margin-top: -1px
+		&.active
+			display: block
+
+.articles
+	/* .articles__item */
+	display: flex
+	flex-direction: row
+	gap: 24px
+	flex-wrap: wrap
+	justify-content: center
+	&__item
+		max-width: 424px
+		width: 100%
+		border-radius: 8px
+		overflow: hidden
+	/* .articles__item-img-container */
+	&__item-img-container
+		width: 100%
+		height: 240px
+	/* .articles__item-img */
+	&__item-img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	/* .articles__item-date */
+	&__item-content
+		border-radius: 8px
+		border-bottom: 1px solid #c2c2c2
+		border-right: 1px solid #c2c2c2
+		border-left: 1px solid #c2c2c2
+		border-bottom-left-radius: 8px
+		border-bottom-right-radius: 8px
+		border-top-left-radius: 0px
+		border-top-right-radius: 0px
+		padding: 16px 20px 20px
+	&__item-date
+		color: #999999
+	/* .articles__item-title */
+	&__item-title
+		font-weight: 600
+		font-size: 16px
+		margin: 8px 0
+	/* .articles__item-text */
+
+	/* .articles__item-button */
+	&__item-button
+		display: flex
+		gap: 8px
+		align-items: center
+		margin-top: 16px
+	/* .articles__item-button-text */
+	&__item-button-text
+		color: $lightBeige
+	/* .articles__item-button-svg */
+	&__item-button-svg
+		flex: none

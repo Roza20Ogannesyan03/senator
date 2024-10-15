@@ -135,3 +135,20 @@ var slider = new Swiper(document.getElementById("swiper1"), {
     prevEl: ".images__swiper-button-prev",
   },
 });
+
+let tabs = document.querySelectorAll(".tabs__tab");
+if (tabs) {
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function (e) {
+      document.querySelector(".tabs__tab.active").classList.remove("active");
+      document
+        .querySelector(".tabs__content.active")
+        .classList.remove("active");
+      let targ = e.target;
+      targ.classList.add("active");
+      document
+        .querySelector(`.tabs__content[data-tab-content="${targ.dataset.tab}"]`)
+        .classList.add("active");
+    });
+  });
+}
